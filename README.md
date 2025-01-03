@@ -31,7 +31,7 @@ Um sistema simples de controle de ponto para empresas, desenvolvido em Django. P
 
 ---
 
-###🚀 Como Usar
+### 🚀 Como Usar
 Pré-requisitos Python 3.11 ou superior. Ambiente virtual configurado. Dependências instaladas.
 
 Instalação
