@@ -31,32 +31,6 @@ Um sistema simples de controle de ponto para empresas, desenvolvido em Django. P
 
 ---
 
-🏗️ Estrutura do Projeto
-controle_de_ponto/
-├── ponto_app/
-│   ├── migrations/
-│   ├── templates/
-│   │   ├── index.html
-│   │   ├── cadastrar_empresa.html
-│   │   ├── empresa.html
-│   │   ├── registrar_ponto.html
-│   │   ├── registro_batidas.html
-│   │   ├── funcionarios.html
-│   │   └── base.html
-│   ├── static/
-│   │   ├── css/
-│   │   │   ├── index.css
-│   │   │   ├── cadastrar_empresa.css
-│   │   │   ├── empresa.css
-│   │   │   ├── registrar_ponto.css
-│   │   │   ├── registro_batidas.css
-│   │   │   └── funcionarios.css
-│   ├── forms.py  # Contém o formulário `FuncionarioForm`
-│   ├── models.py
-│   ├── views.py
-│   ├── urls.py
-│   └── admin.py
-
 🚀 Como Usar
 Pré-requisitos Python 3.11 ou superior. Ambiente virtual configurado. Dependências instaladas.
 
@@ -66,8 +40,9 @@ Clone este repositório:
 git clone https://github.com/seu-usuario/controle-de-ponto.git
 cd controle-de-ponto
 
-Ative o ambiente virtual:
+Crie e Ative o ambiente virtual:
 No Windows:
+python -m venv venv
 venv\Scripts\activate
 No Linux/MacOS:
 source venv/bin/activate
