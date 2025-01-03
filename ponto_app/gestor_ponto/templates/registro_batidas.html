@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Batidas</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'registro_batidas.css' %}">
+</head>
+<body>
+    <div class="container">
+        <h2 class="titulo">Registro de Batidas - {{ empresa.nome }}</h2>
+
+        <form method="GET" class="consulta-form">
+            <div class="form-group">
+                <label for="nome">Nome do Funcionário:</label>
+                <input type="text" id="nome" name="nome" value="{{ query_nome|default:'' }}" placeholder="Digite o nome">
+            </div>
+
+            <div class="form-group">
+                <label for="data">Data:</label>
+                <input type="date" id="data" name="data" value="{{ query_data|default:'' }}">
+            </div>
+
+            <button type="submit" class="btn-consultar">Consultar</button>
+        </form>
+
+        <div class="tabela-container">
+            <table class="registros-tabela">
+                <thead>
+                    <tr>
+                        <th>Funcionário</th>
+                        <th>Data</th> 
+                        <th>Entrada</th>
+                        <th>Saída</th>
+                        <th>Horas Trabalhadas</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for registro in registros %}
+                        <tr>
+                            <td>{{ registro.funcionario.nome }}</td>
+                            <td>{{ registro.data|date:"d/m/Y" }}</td> 
+                            <td>{{ registro.entrada|date:"H:i:s" }}</td>
+                            <td>
+                                {% if registro.saida %}
+                                    {{ registro.saida|date:"H:i:s" }}
+                                {% else %}
+                                    —
+                                {% endif %}
+                            </td>
+                            <td>
+                                {% if registro.saida %}
+                                    {{ registro.calcular_horas_trabalhadas }}
+                                {% else %}
+                                    —
+                                {% endif %}
+                            </td>
+                        </tr>
+                    {% empty %}
+                        <tr>
+                            <td colspan="5" class="nenhum-registro">Nenhum registro encontrado.</td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+
+        <div class="btn-container">
+            <a href="{% url 'pagina_empresa' empresa.id %}" class="btn-voltar">Voltar</a>
+        </div>
+    </div>
+</body>
+</html>

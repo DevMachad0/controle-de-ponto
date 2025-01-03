@@ -1,0 +1,157 @@
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    background-color: #f7f7f7;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container-ponto {
+    width: 100%;
+    max-width: 800px;
+    margin: 20px;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+}
+
+.ponto-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.ponto-header h1 {
+    font-size: 2rem;
+    color: #333;
+    font-weight: 600;
+}
+
+.ponto-header h2 {
+    font-size: 1.2rem;
+    color: #555;
+}
+
+.ponto-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 8px;
+    font-weight: 500;
+}
+
+input[type="text"],
+select {
+    padding: 12px;
+    font-size: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+input[type="text"]:focus,
+select:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.3);
+    outline: none;
+}
+
+.datetime {
+    text-align: center;
+    font-size: 1.1rem;
+    color: #444;
+}
+
+.btn-registrar {
+    padding: 12px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin-top: 20px;
+    animation: fadeInUpButton 1s ease-out;
+}
+
+.btn-registrar:hover {
+    background-color: #0056b3;
+}
+
+.btn-voltar {
+    text-decoration: none;
+    color: #007bff;
+    font-weight: 600;
+    font-size: 1.1rem;
+    padding: 10px 20px;
+    border: 1px solid #007bff;
+    border-radius: 8px;
+    margin-top: 15px;
+    transition: all 0.3s ease;
+    animation: fadeInUpButton 1.2s ease-out;
+}
+
+.btn-voltar:hover {
+    background-color: #007bff;
+    color: white;
+    border-color: #007bff;
+}
+
+.erro-msg {
+    background-color: #f8d7da;
+    color: #721c24;
+    padding: 15px;
+    border-radius: 8px;
+    border: 1px solid #f5c6cb;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.erro-msg p {
+    margin: 0;
+}
+
+@media (max-width: 600px) {
+    .container-ponto {
+        padding: 20px;
+    }
+
+    .ponto-header h1 {
+        font-size: 1.6rem;
+    }
+
+    .ponto-header h2 {
+        font-size: 1rem;
+    }
+
+    .btn-registrar {
+        width: 100%;
+    }
+}
+
+@keyframes fadeInUpButton {
+    0% {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

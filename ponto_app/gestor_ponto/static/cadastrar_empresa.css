@@ -1,0 +1,125 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f7fb;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.popup-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+}
+
+.popup-content {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 500px;
+    padding: 30px;
+    box-sizing: border-box;
+    text-align: center;
+    animation: popupFadeIn 0.5s ease;
+}
+
+.popup-content h2 {
+    font-size: 1.8rem;
+    color: #007bff;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+label {
+    font-size: 1rem;
+    color: #333;
+    margin-bottom: 8px;
+    text-align: left;
+    display: block;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+    box-sizing: border-box;
+    transition: border-color 0.3s;
+}
+
+input[type="text"]:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+.submit-btn, .close-btn {
+    padding: 12px 20px;
+    border-radius: 4px;
+    border: none;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.submit-btn {
+    background-color: #007bff;
+    color: #fff;
+    margin-right: 10px;
+}
+
+.submit-btn:hover {
+    background-color: #0056b3;
+}
+
+.close-btn {
+    background-color: #f1f1f1;
+    color: #333;
+}
+
+.close-btn:hover {
+    background-color: #ddd;
+}
+
+@keyframes popupFadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 600px) {
+    .popup-content {
+        padding: 20px;
+    }
+
+    .popup-content h2 {
+        font-size: 1.5rem;
+    }
+
+    input[type="text"] {
+        font-size: 0.9rem;
+        padding: 8px;
+    }
+
+    .submit-btn, .close-btn {
+        padding: 10px 18px;
+    }
+}

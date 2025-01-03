@@ -1,0 +1,34 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastrar Empresa</title>
+    <link rel="stylesheet" href="../static/cadastrar_empresa.css">
+</head>
+<body>
+    <div class="popup-container">
+        <div class="popup-content">
+            <h2>Cadastrar Nova Empresa</h2>
+            <form action="#" method="POST">
+                {% csrf_token %}
+                <label for="nome">Nome da Empresa</label>
+                <input type="text" id="nome" name="nome" required placeholder="Digite o nome da empresa">
+
+                <label for="endereco">Endereço</label>
+                <input type="text" id="endereco" name="endereco" required placeholder="Digite o endereço da empresa">
+
+                <button type="submit" class="submit-btn">Cadastrar</button>
+                <button type="button" class="close-btn" onclick="fecharPopup()">Fechar</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        function fecharPopup() {
+            window.history.back();
+        }
+    </script>
+</body>
+</html>

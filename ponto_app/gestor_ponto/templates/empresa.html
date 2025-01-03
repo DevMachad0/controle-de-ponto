@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ empresa.nome }}</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'empresa.css' %}">
+</head>
+<body>
+    <div class="container-empresa">
+
+        <header class="empresa-header">
+            <h1>{{ empresa.nome }}</h1>
+        </header>
+
+
+        <main class="empresa-menu">
+            <ul class="menu-central">
+                <li>
+                    <a href="{% url 'registrar_batida' empresa.id %}" class="menu-item">
+                        📋 <span>Registrar Batida</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="{% url 'funcionarios' empresa.id %}" class="menu-item">
+                        ➕ <span>Funcionários</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="{% url 'registro_batidas' empresa.id %}" class="menu-item">
+                        🕒 <span>Registro de Batidas</span>
+                    </a>                    
+                </li>
+                <li>
+                    <a href="{% url 'index' %}" class="menu-item">
+                        ⬅️ <span>Voltar</span>
+                    </a>
+                </li>
+            </ul>
+        </main>
+    </div>
+</body>
+</html>

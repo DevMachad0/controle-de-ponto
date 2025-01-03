@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Ponto - Página Inicial</title>
+    <link rel="stylesheet" href="../static/index.css">
+    <script>
+        function acessarEmpresa() {
+            const empresaSelect = document.getElementById('empresa');
+            const empresaId = empresaSelect.value;
+            if (empresaId) {
+                window.location.href = `/empresa/${empresaId}/`;
+            } else {
+                alert('Por favor, selecione uma empresa.');
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1 class="welcome-message">Bem-vindo ao Sistema de Ponto</h1>
+        <div class="form-container">
+            <label for="empresa">Selecione a empresa desejada:</label>
+            <select id="empresa" name="empresa" class="empresa-select">
+                {% for empresa in empresas %}
+                    <option value="{{ empresa.id }}">{{ empresa.nome }}</option>
+                {% endfor %}
+            </select>
+            <a href="#" class="acessar" onclick="acessarEmpresa()">Acessar</a>
+        </div>
+        <div class="form-container">
+            <label>Cadastre uma nova empresa:</label>
+            <a href="{% url 'cadastrar_empresa' %}" class="cadastrar-empresa-btn">Cadastrar nova empresa</a>
+        </div>
+    </div>
+</body>
+</html>

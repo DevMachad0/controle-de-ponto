@@ -1,0 +1,108 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f7fc;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    text-align: center;
+    max-width: 400px;
+    width: 100%;
+    padding: 30px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.welcome-message {
+    font-size: 1.8rem;
+    color: #333;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.form-container {
+    margin-top: 20px;
+}
+
+label {
+    font-size: 1rem;
+    color: #555;
+    display: block;
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+.empresa-select {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    transition: border-color 0.3s ease;
+}
+
+.empresa-select:focus {
+    border-color: #4CAF50;
+    outline: none;
+}
+
+.acessar {
+    display: inline-block;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #4CAF50;
+    padding: 10px 20px;
+    border-radius: 4px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    margin-bottom: 5px;
+}
+
+.acessar:hover {
+    background-color: #45a049;
+}
+
+.nova-empresa {
+    margin-top: 20px;
+}
+
+.cadastrar-empresa-btn {
+    display: inline-block;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #2196F3;
+    padding: 10px 20px;
+    border-radius: 4px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    margin-bottom: 5px;
+}
+
+.cadastrar-empresa-btn:hover {
+    background-color: #1e88e5;
+}
+
+.new-empresa-btn:focus {
+    outline: none;
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 20px;
+    }
+
+    .welcome-message {
+        font-size: 1.5rem;
+    }
+}

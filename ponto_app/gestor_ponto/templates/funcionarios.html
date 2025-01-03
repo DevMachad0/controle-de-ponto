@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastrar Funcionário</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'funcionarios.css' %}">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Cadastrar Funcionário para a Empresa: {{ empresa.nome }}</h1>
+        </header>
+
+        <form method="POST" class="formulario">
+            {% csrf_token %}
+            <div class="form-fields">
+                {{ form.as_p }}
+            </div>
+            <div class="buttons">
+                <button type="submit" class="btn-submit">Cadastrar</button>
+                <a href="{% url 'pagina_empresa' empresa.id %}" class="btn-voltar">Voltar</a>
+            </div>
+        </form>
+
+        <div class="relatorio-funcionarios">
+            <h2>Funcionários Cadastrados</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nome</th>
+                        <th>E-mail</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for funcionario in funcionarios %}
+                        <tr>
+                            <td>{{ funcionario.nome }}</td>
+                            <td>{{ funcionario.email }}</td>
+                        </tr>
+                    {% empty %}
+                        <tr>
+                            <td colspan="2">Nenhum funcionário cadastrado.</td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+</html>
