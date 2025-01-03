@@ -31,7 +31,7 @@ Um sistema simples de controle de ponto para empresas, desenvolvido em Django. P
 
 ---
 
-🚀 Como Usar
+###🚀 Como Usar
 Pré-requisitos Python 3.11 ou superior. Ambiente virtual configurado. Dependências instaladas.
 
 Instalação
@@ -42,29 +42,29 @@ cd controle-de-ponto
 
 Crie e Ative o ambiente virtual:
 No Windows:
-python -m venv venv
-venv\Scripts\activate
+- python -m venv venv
+- venv\Scripts\activate
 No Linux/MacOS:
-source venv/bin/activate
+- source venv/bin/activate
 
 Instale as dependências:
-pip install -r requirements.txt
+- pip install -r requirements.txt
 
 Configure o banco de dados:
-python manage.py migrate
+- python manage.py migrate
 
 Popule o banco de dados com dados fictícios:
-from ponto_app.models import Empresa, Funcionario, Ponto
+- from ponto_app.models import Empresa, Funcionario, Ponto
 
-Código de criação fornecido no projeto.
+### Código de criação fornecido no projeto.
 
 Inicie o servidor:
-python manage.py runserver
+- python manage.py runserver
 
 Acessando o Sistema
-Abra o navegador em: http://127.0.0.1:8000
+- Abra o navegador em: http://127.0.0.1:8000
 
-📚 Funcionalidades em Detalhes
+### 📚 Funcionalidades em Detalhes
 Página de Registro de Batidas
 Filtros: Nome do funcionário e data.
 Colunas exibidas:
@@ -77,12 +77,12 @@ Estilização
 - Layout responsivo e visual limpo.
 - CSS dedicado para cada página.
 
-🛠️ Tecnologias Utilizadas
+### 🛠️ Tecnologias Utilizadas
 - Django 5.1.4: Framework principal para o desenvolvimento.
 - SQLite: Banco de dados simples e eficiente.
 - HTML/CSS: Para a interface do usuário.
 
-📂 Banco de Dados
+### 📂 Banco de Dados
 Estrutura dos Modelos
 
 Empresa
@@ -100,10 +100,10 @@ Ponto
 - entrada: Hora – Horário de entrada.
 - saida: Hora – Horário de saída (opcional).
 
-📄 Licença
+### 📄 Licença
 Este projeto é open-source e está sob a licença MIT.
 
-💡 Ideias Futuras
+### 💡 Ideias Futuras
 - Exportação de relatórios em PDF/Excel.
 - Integração com APIs de terceiros.
 - Sistema de autenticação para gerentes e administradores.
