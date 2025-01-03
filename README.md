@@ -33,36 +33,6 @@ Um sistema simples de controle de ponto para empresas, desenvolvido em Django. P
 
 ## 🏗️ Estrutura do Projeto
 
-```plaintext
-controle_de_ponto/
-├── ponto_app/
-│   ├── migrations/
-│   ├── templates/
-│   │   ├── index.html
-│   │   ├── cadastrar_empresa.html
-│   │   ├── empresa.html
-│   │   ├── registrar_ponto.html
-│   │   ├── registro_batidas.html
-│   │   ├── funcionarios.html
-│   │   └── base.html
-│   ├── static/
-│   │   ├── css/
-│   │   │   ├── index.css
-│   │   │   ├── cadastrar_empresa.css
-│   │   │   ├── empresa.css
-│   │   │   ├── registrar_ponto.css
-│   │   │   ├── registro_batidas.css
-│   │   │   └── funcionarios.css
-│   ├── forms.py  # Contém o formulário `FuncionarioForm`
-│   ├── models.py
-│   ├── views.py
-│   ├── urls.py
-│   └── admin.py
-├── venv/
-├── db.sqlite3
-├── requirements.txt
-└── manage.py
-
 🚀 Como Usar
 Pré-requisitos
 Python 3.11 ou superior.
